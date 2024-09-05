@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <span class="comment-box__caution">※いただいたコメントを元に記事を作成することがございますので、あらかじめご了承ください。</span>
     </p>
   `;
-  const commentBox = document.querySelector('.js-comment-box');
-  commentBox.insertAdjacentHTML('afterbegin', newCommentHtml);
+  document.querySelector('.js-comment-box').insertAdjacentHTML('afterbegin', newCommentHtml);
   
 });
