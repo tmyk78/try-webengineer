@@ -17,8 +17,24 @@ li {
   list-style-type: none;
 }
 
+.mb0 {
+  margin-bottom: 0!important;
+}
+
 .imgWrap {
   text-align: center;
+}
+
+.illustrationTitle {
+  border-bottom: 2px solid #f28856;
+  font-size: 1rem;
+  padding-left: 56px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  background-repeat: no-repeat;
+  background-size: auto 60px;
+  min-height: 62px;
 }
 
 html {
@@ -115,7 +131,7 @@ body {
 
 .entry-content h2 {
   position: relative;
-  background: #fde9e0;
+  background-color: #fde9e0;
   border-radius: 4px;
   line-height: 1.5;
   font-size: 1.125rem;
@@ -206,7 +222,56 @@ body {
   position: relative;
 }
 
+.entry-content .linkListTitle {
+  margin-top: 20px;
+}
 
+.entry-content .linkList li {
+  margin-bottom: 0;
+}
+
+.entry-content .linkList li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.entry-content .linkList a {
+  font-size: 0.875rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 12px 20px 12px 12px;
+}
+
+.entry-content .linkList a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #f28856;
+  border-right: 2px solid #f28856;
+  top: 50%;
+  right: 7px;
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.entry-content .illustrationTitle {
+  background-color: transparent;
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+.entry-content .illustrationTitle::before {
+  content: "";
+  display: none;
+}
+
+.entry-content .illustrationTitle__img01 {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/t/try-webengineer/20240905/20240905152641.png");
+  background-size: auto 61px;
+  padding: 0 0 0 74px;
+}
 
 
 
@@ -367,17 +432,9 @@ body {
   margin-bottom: 8px;
 }
 
+
 .comment-box .comment-box__title {
-  border-bottom: 2px solid #f28856;
-  font-size: 1rem;
-  padding-left: 56px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
   background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/t/try-webengineer/20240902/20240902214155.png");
-  background-repeat: no-repeat;
-  background-size: auto 60px;
-  min-height: 62px;
 }
 
 .comment-box__description {
@@ -425,7 +482,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 12px 20px 12px 0;
+  padding: 12px 20px 12px 12px;
 }
 
 .archive-entry .archive-entry-header .entry-title .entry-title-link::after {
@@ -496,10 +553,24 @@ body {
   }
 
 
-  .entry-content .button {
-    max-width: 400px;
-    margin: 0 auto;
+  .entry-content .illustrationTitle__img01 {
+    padding-left: 104px;
+    background-size: auto 81px;
+    min-height: 82px;
   }
+
+  .entry-content .linkListTitle {
+    margin-top: 46px;
+  }
+
+  .entry-content .linkList a {
+    padding: 20px 20px 20px 12px;
+  }
+
+  .entry-content .linkList a:hover {
+    opacity: .5;
+  }
+
 
 
   #box2 {
@@ -522,9 +593,27 @@ body {
 
 
 
+
+  .comment-box .comment-box__title {
+    padding-left: 72px;
+    background-size: auto 80px;
+    min-height: 82px;
+  }
+
+  .comment-box__description {
+    margin-bottom: 20px;
+  }
+
   .comment-box .leave-comment-title:hover {
     opacity: .7;
   }
+
+  .comment-box .leave-comment-title {
+    margin-bottom: 32px;
+  }
+
+
+
 
 
 
@@ -541,6 +630,10 @@ body {
     margin-bottom: 80px;
   }
 
+  .bottom-editarea__footer--linkAnchor:hover {
+    opacity: .7;
+  }
+
   .hatena-module {
     margin-bottom: 32px;
   }
@@ -548,6 +641,9 @@ body {
 
 
 
+  .archive-entry .archive-entry-header .entry-title .entry-title-link:hover {
+    opacity: .5;
+  }
 
 
   .entry-content .button:hover {
