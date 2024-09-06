@@ -129,6 +129,10 @@ body {
   margin-bottom: 24px;
 }
 
+.entry-content {
+  margin-bottom: 60px;
+}
+
 .entry-content h2 {
   position: relative;
   background-color: #fde9e0;
@@ -274,6 +278,17 @@ body {
 }
 
 
+.entry-tag .entry-tag-link {
+  border-radius: 4px;
+}
+
+.entry-tag .entry-tag-icon {
+  flex-basis: auto;
+}
+
+.entry-tag .entry-tag-label {
+  flex-basis: auto;
+}
 
 
 
@@ -403,8 +418,13 @@ body {
   margin-bottom: 24px;
 }
 
+.social-buttons .social-button-item {
+  flex-basis: auto;
+}
 
-
+.social-buttons > span {
+  flex-basis: auto;
+}
 
 
 .comment-box .entry-comment {
@@ -482,7 +502,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 20px 12px 0;
 }
 
 .archive-entry .archive-entry-header .entry-title .entry-title-link::after {
@@ -572,6 +592,7 @@ body {
   }
 
 
+  
 
   #box2 {
     flex-basis: 300px;
