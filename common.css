@@ -277,6 +277,40 @@ body {
   padding: 0 0 0 74px;
 }
 
+.entry-content .related {
+  background-color: #fef7f5;
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.entry-content .related .related__title {
+  display: block;
+  white-space: nowrap;
+  flex-basis: auto;
+}
+
+.entry-content .related a {
+  display: block;
+}
+
+.entry-content .sourceLink {
+  text-align: center;
+}
+
+.entry-content .sourceLink__image {
+  display: inline-block;
+}
+
+.entry-content .sourceLink__text {
+  display: block;
+  margin-top: 4px;
+  color: #d2d8dd;
+  font-size: 0.75rem;
+}
+
+
+
 
 .entry-tag .entry-tag-link {
   border-radius: 4px;
