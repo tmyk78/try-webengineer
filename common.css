@@ -277,6 +277,12 @@ body {
   padding: 0 0 0 74px;
 }
 
+.entry-content .illustrationTitle__img02 {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/t/try-webengineer/20240919/20240919212502.png");
+  background-size: auto 61px;
+  padding: 0 0 0 74px;
+}
+
 .entry-content .related {
   background-color: #fef7f5;
   padding: 12px;
@@ -577,14 +583,64 @@ body {
   display: none;
 }
 
-
-
-
-.img_top01 {
-  width: 260px;
-  display: inline-block;
-  text-align: center;
+.archive-entry .entry-thumb-link {
+  display: none;
 }
+
+
+
+
+.toTopButton {
+  position: fixed;
+  right: 10px;
+  bottom: 40px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #f28856;
+  border-radius: 4px;
+  background-color: #fef7f5;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.toTopButton::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #f28856;
+  border-right: 2px solid #f28856;
+  top: 14px;
+  left: 14px;
+  transform: rotate(-45deg);
+}
+
+.toTopButton::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #f28856;
+  border-right: 2px solid #f28856;
+  top: 24px;
+  left: 14px;
+  transform: rotate(-45deg);
+}
+
+.toTopButton.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
 
 @media (min-width: 768px) {
 
@@ -627,6 +683,12 @@ body {
   .entry-content .illustrationTitle__img01 {
     padding-left: 104px;
     background-size: auto 81px;
+    min-height: 82px;
+  }
+
+  .entry-content .illustrationTitle__img02 {
+    padding-left: 104px;
+    background-size: auto 80px;
     min-height: 82px;
   }
 
@@ -730,9 +792,27 @@ body {
 
 
 
-  .img_top01 {
-    width: 340px;
-    display: inline-block;
-    text-align: center;
+  .toTopButton {
+    right: 10px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
   }
+  
+  .toTopButton::before {
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .toTopButton::after {
+    width: 18px;
+    height: 18px;
+    top: 32px;
+    left: 20px;
+  }
+
+
 }
