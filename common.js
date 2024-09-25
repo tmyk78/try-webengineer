@@ -25,30 +25,47 @@ document.addEventListener('DOMContentLoaded', () => {
     <button type="button" class="toTopButton js-toTopButton"></button>
   `;
   const containerInner = document.querySelector('#container-inner');
-  if(containerInner) {
-    containerInner.insertAdjacentHTML('beforeend', newToTopHtml);
+  if(!containerInner) return;
+  containerInner.insertAdjacentHTML('beforeend', newToTopHtml);
 
-    const scrollToTopBtn = document.querySelector('.js-toTopButton');
+  const scrollToTopBtn = document.querySelector('.js-toTopButton');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                scrollToTopBtn.classList.remove('show');
-            } else {
-                scrollToTopBtn.classList.add('show');
-            }
-        });
-    }, { threshold: 0 });
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              scrollToTopBtn.classList.remove('show');
+          } else {
+              scrollToTopBtn.classList.add('show');
+          }
+      });
+  }, { threshold: 0 });
 
-    observer.observe(document.querySelector('#blog-title'));
+  observer.observe(document.querySelector('#blog-title'));
 
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+  scrollToTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+
+
+  // 目次にスクロールを追加する
+  const tocLinks = document.querySelectorAll('.js-toc a');
+  if (!tocLinks.length) return;
+
+  tocLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.querySelector(`#${targetId}`);
+
+      if (!targetElement) return;
+      window.scrollTo({
+        top: targetElement.offsetTop - 20,
+        behavior: 'smooth'
+      });
     });
-
-  }
-
-
+  });
 
 
 
