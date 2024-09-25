@@ -556,8 +556,7 @@ body {
 .archive-entry .archive-entry-header .entry-title .entry-title-link {
   font-size: 0.875rem;
   text-decoration: none;
-  display: flex;
-  align-items: center;
+  display: block;
   position: relative;
   padding: 12px 20px 12px 0;
 }
@@ -636,10 +635,46 @@ body {
   visibility: visible;
 }
 
+.toc {
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 32px 0 48px 0;
+  padding: 20px;
+}
 
+h2.toc--title {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
 
+h2.toc--title::before {
+  content: "";
+  display: none;
+}
 
+.toc--link {
+  text-decoration: none;
+}
 
+li.toc--listItem {
+  margin-bottom: 0;
+}
+
+.toc--subList {
+  margin: 10px 0 0 14px;
+}
+
+li.toc--subListItem {
+  margin-bottom: 10px;
+}
+
+.toc--subLink {
+  text-decoration: none;
+}
 
 
 @media (min-width: 768px) {
@@ -814,5 +849,8 @@ body {
     left: 20px;
   }
 
+  .toc {
+    display: inline-block;
+  }
 
 }
