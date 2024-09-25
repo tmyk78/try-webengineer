@@ -21,6 +21,10 @@ li {
   margin-bottom: 0!important;
 }
 
+.mb10 {
+  margin-bottom: 10px!important;
+}
+
 .imgWrap {
   text-align: center;
 }
@@ -849,8 +853,13 @@ li.toc--subListItem {
     left: 20px;
   }
 
-  .toc {
-    display: inline-block;
+
+  .toc--link:hover {
+    text-decoration: underline;
+  }
+
+  .toc--subLink:hover {
+    text-decoration: underline;
   }
 
 }
