@@ -199,6 +199,7 @@ body {
 .entry-content h4 {
   margin-bottom: 4px;
   line-height: 1.5;
+  font-size: 1rem;
 }
 
 
@@ -211,7 +212,7 @@ body {
 .entry-content strong {
   font-size: 1.125rem;
   font-weight: normal;
-  background: linear-gradient(transparent 80%, #f28856 80%);
+  background: linear-gradient(transparent 80%,#f8d4c1 80%);
 }
 
 
@@ -758,6 +759,12 @@ li.toc--subListItem {
   .entry-content .linkList a:hover {
     opacity: .5;
   }
+
+  .entry-content strong {
+    font-size: 1.25rem;
+    background: linear-gradient(transparent 70%,#f8d4c1 70%);
+  }
+
 
 
   
