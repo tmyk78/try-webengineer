@@ -308,6 +308,7 @@ body {
   background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/t/try-webengineer/20241218/20241218011159.png");
   background-size: auto 61px;
   padding: 0 0 0 74px;
+  background-position-x: 10px;
 }
 
 .entry-content .related {
@@ -708,6 +709,7 @@ li.toc--subListItem {
 
   body {
     font-size: 1rem;
+    line-height: 1.8;
   }
 
   #blog-title {
