@@ -304,6 +304,12 @@ body {
   padding: 0 0 0 74px;
 }
 
+.entry-content .illustrationTitle__img03 {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/t/try-webengineer/20241218/20241218011159.png");
+  background-size: auto 61px;
+  padding: 0 0 0 74px;
+}
+
 .entry-content .related {
   background-color: #fef7f5;
   padding: 12px;
@@ -699,6 +705,10 @@ li.toc--subListItem {
 
 
 @media (min-width: 768px) {
+
+  body {
+    font-size: 1rem;
+  }
 
   #blog-title {
     margin: 0;
